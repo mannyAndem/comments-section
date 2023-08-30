@@ -187,7 +187,7 @@ class CurrentUserComment extends Comment {
 
 // function to fetch and render comments from the json file
 async function fetchComments() {
-  let data = await fetch("/public/data.json");
+  let data = await fetch("./data.json");
   data = await data.json();
   currentUser = { ...data.currentUser };
   console.log(currentUser);
@@ -229,7 +229,7 @@ if (comments == null) {
   fetchComments();
 } else {
   (async () => {
-    let data = await fetch("/public/data.json");
+    let data = await fetch("./data.json");
     data = await data.json();
     currentUser = { ...data.currentUser };
 
